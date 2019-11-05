@@ -22,10 +22,5 @@
 			<artifactId>nav-arbeidsforhold-v3-tjenestespesifikasjon</artifactId>
 			<classifier>jaxws</classifier>
 		</dependency>
-		<dependency>
-			<groupId>no.nav.foreldrepenger.vtp</groupId>
-			<artifactId>core</artifactId>
-		</dependency>
-
 	</dependencies>
 </project>

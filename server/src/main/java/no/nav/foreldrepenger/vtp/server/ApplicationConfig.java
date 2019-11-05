@@ -24,6 +24,7 @@ import no.nav.oppgave.OppgaveKontantstotteMockImpl;
 import no.nav.sigrun.SigrunMock;
 import no.nav.tjeneste.fpformidling.FpFormidlingMock;
 import no.nav.tps.proxy.api.v1.innsyn.InnsynMock;
+import no.nav.tjeneste.virksomhet.saf.safMock;
 import no.nav.vtp.DummyRestTjeneste;
 import no.nav.vtp.DummyRestTjenesteBoolean;
 import no.nav.vtp.hentinntektlistebolk.HentInntektlisteBolkREST;
@@ -87,6 +88,7 @@ public class ApplicationConfig extends Application {
         classes.add(OppgaveKontantstotteMockImpl.class);
         classes.add(AktoerIdentMock.class);
         classes.add(InnsynMock.class);
+        classes.add(safMock.class);
 
         // tekniske ting
         classes.add(Oauth2RestService.class);

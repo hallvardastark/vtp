@@ -36,11 +36,6 @@
 			<groupId>no.nav.sbl.dialogarena</groupId>
 			<artifactId>behandlesak-v2-tjenestespesifikasjon</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>no.nav.foreldrepenger.vtp</groupId>
-			<artifactId>core</artifactId>
-		</dependency>
-
 	</dependencies>
 
 </project>
