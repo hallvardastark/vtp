@@ -7,8 +7,8 @@ import no.nav.foreldrepenger.vtp.autotest.testscenario.TestscenarioPersonopplysn
 import no.nav.foreldrepenger.vtp.autotest.testscenario.TestscenariodataDto;
 import no.nav.foreldrepenger.vtp.autotest.testscenario.inntektytelse.arbeidsforhold.ArbeidsforholdModell;
 import no.nav.foreldrepenger.vtp.autotest.testscenario.inntektytelse.inntektkomponent.InntektskomponentModell;
-import no.nav.foreldrepenger.vtp.autotest.testscenario.personopplysning.brukermodell.BarnModell;
-import no.nav.foreldrepenger.vtp.autotest.testscenario.personopplysning.brukermodell.PersonModell;
+import no.nav.foreldrepenger.vtp.autotest.testscenario.personopplysning.BarnModell;
+import no.nav.foreldrepenger.vtp.autotest.testscenario.personopplysning.PersonModell;
 import no.nav.foreldrepenger.vtp.testmodell.repo.Testscenario;
 import no.nav.foreldrepenger.vtp.testmodell.repo.TestscenarioRepository;
 import no.nav.foreldrepenger.vtp.testmodell.repo.TestscenarioTemplate;
