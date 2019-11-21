@@ -1,5 +1,21 @@
 package no.nav.foreldrepenger.vtp.testmodell;
 
+import no.nav.foreldrepenger.vtp.autotest.testscenario.inntektytelse.inntektkomponent.InntektskomponentModell;
+import no.nav.foreldrepenger.vtp.autotest.testscenario.inntektytelse.inntektkomponent.Inntektsperiode;
+import no.nav.foreldrepenger.vtp.testmodell.inntektytelse.InntektYtelseModell;
+import no.nav.foreldrepenger.vtp.testmodell.inntektytelse.RelatertYtelseTema;
+import no.nav.foreldrepenger.vtp.testmodell.inntektytelse.arena.*;
+import no.nav.foreldrepenger.vtp.testmodell.inntektytelse.infotrygd.*;
+import no.nav.foreldrepenger.vtp.testmodell.inntektytelse.infotrygd.beregningsgrunnlag.*;
+import no.nav.foreldrepenger.vtp.testmodell.inntektytelse.infotrygd.ytelse.InfotrygdYtelse;
+import no.nav.foreldrepenger.vtp.testmodell.repo.Testscenario;
+import no.nav.foreldrepenger.vtp.testmodell.repo.TestscenarioImpl;
+import no.nav.foreldrepenger.vtp.testmodell.repo.impl.BasisdataProviderFileImpl;
+import no.nav.foreldrepenger.vtp.testmodell.repo.impl.TestscenarioRepositoryImpl;
+import no.nav.foreldrepenger.vtp.testmodell.repo.impl.TestscenarioTilTemplateMapper;
+import no.nav.foreldrepenger.vtp.testmodell.util.JsonMapper;
+import org.junit.Test;
+
 import java.io.BufferedOutputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -8,37 +24,6 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
-
-import org.junit.Test;
-
-import no.nav.foreldrepenger.vtp.testmodell.inntektytelse.InntektYtelseModell;
-import no.nav.foreldrepenger.vtp.testmodell.inntektytelse.RelatertYtelseTema;
-import no.nav.foreldrepenger.vtp.testmodell.inntektytelse.arena.ArenaMeldekort;
-import no.nav.foreldrepenger.vtp.testmodell.inntektytelse.arena.ArenaSak;
-import no.nav.foreldrepenger.vtp.testmodell.inntektytelse.arena.ArenaVedtak;
-import no.nav.foreldrepenger.vtp.testmodell.inntektytelse.arena.SakStatus;
-import no.nav.foreldrepenger.vtp.testmodell.inntektytelse.arena.VedtakStatus;
-import no.nav.foreldrepenger.vtp.testmodell.inntektytelse.infotrygd.InfotrygdModell;
-import no.nav.foreldrepenger.vtp.testmodell.inntektytelse.infotrygd.InfotrygdSakBehandlingtema;
-import no.nav.foreldrepenger.vtp.testmodell.inntektytelse.infotrygd.InfotrygdSakStatus;
-import no.nav.foreldrepenger.vtp.testmodell.inntektytelse.infotrygd.InfotrygdSakType;
-import no.nav.foreldrepenger.vtp.testmodell.inntektytelse.infotrygd.InfotrygdTema;
-import no.nav.foreldrepenger.vtp.testmodell.inntektytelse.infotrygd.beregningsgrunnlag.InfotrygdArbeidsforhold;
-import no.nav.foreldrepenger.vtp.testmodell.inntektytelse.infotrygd.beregningsgrunnlag.InfotrygdArbeidskategori;
-import no.nav.foreldrepenger.vtp.testmodell.inntektytelse.infotrygd.beregningsgrunnlag.InfotrygdBeregningsgrunnlag;
-import no.nav.foreldrepenger.vtp.testmodell.inntektytelse.infotrygd.beregningsgrunnlag.InfotrygdBeregningsgrunnlagBehandlingtema;
-import no.nav.foreldrepenger.vtp.testmodell.inntektytelse.infotrygd.beregningsgrunnlag.InfotrygdForeldrepengerBeregningsgrunnlag;
-import no.nav.foreldrepenger.vtp.testmodell.inntektytelse.infotrygd.beregningsgrunnlag.InfotrygdInntektsperiodeType;
-import no.nav.foreldrepenger.vtp.testmodell.inntektytelse.infotrygd.beregningsgrunnlag.InfotrygdVedtak;
-import no.nav.foreldrepenger.vtp.testmodell.inntektytelse.infotrygd.ytelse.InfotrygdYtelse;
-import no.nav.foreldrepenger.vtp.testmodell.inntektytelse.inntektkomponent.InntektskomponentModell;
-import no.nav.foreldrepenger.vtp.testmodell.inntektytelse.inntektkomponent.Inntektsperiode;
-import no.nav.foreldrepenger.vtp.testmodell.repo.Testscenario;
-import no.nav.foreldrepenger.vtp.testmodell.repo.TestscenarioImpl;
-import no.nav.foreldrepenger.vtp.testmodell.repo.impl.BasisdataProviderFileImpl;
-import no.nav.foreldrepenger.vtp.testmodell.repo.impl.TestscenarioRepositoryImpl;
-import no.nav.foreldrepenger.vtp.testmodell.repo.impl.TestscenarioTilTemplateMapper;
-import no.nav.foreldrepenger.vtp.testmodell.util.JsonMapper;
 
 public class InntektYtelseTest {
     private static final JsonMapper jsonMapper =  new JsonMapper();

@@ -2,14 +2,17 @@ package no.nav.foreldrepenger.vtp.server.api.scenario;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import no.nav.foreldrepenger.vtp.kontrakter.TestscenarioDto;
-import no.nav.foreldrepenger.vtp.kontrakter.TestscenarioPersonopplysningDto;
-import no.nav.foreldrepenger.vtp.kontrakter.TestscenariodataDto;
-import no.nav.foreldrepenger.vtp.testmodell.inntektytelse.arbeidsforhold.ArbeidsforholdModell;
-import no.nav.foreldrepenger.vtp.testmodell.inntektytelse.inntektkomponent.InntektskomponentModell;
-import no.nav.foreldrepenger.vtp.testmodell.personopplysning.BarnModell;
-import no.nav.foreldrepenger.vtp.testmodell.personopplysning.PersonModell;
-import no.nav.foreldrepenger.vtp.testmodell.repo.*;
+import no.nav.foreldrepenger.vtp.autotest.testscenario.TestscenarioDto;
+import no.nav.foreldrepenger.vtp.autotest.testscenario.TestscenarioPersonopplysningDto;
+import no.nav.foreldrepenger.vtp.autotest.testscenario.TestscenariodataDto;
+import no.nav.foreldrepenger.vtp.autotest.testscenario.inntektytelse.arbeidsforhold.ArbeidsforholdModell;
+import no.nav.foreldrepenger.vtp.autotest.testscenario.inntektytelse.inntektkomponent.InntektskomponentModell;
+import no.nav.foreldrepenger.vtp.autotest.testscenario.personopplysning.brukermodell.BarnModell;
+import no.nav.foreldrepenger.vtp.autotest.testscenario.personopplysning.brukermodell.PersonModell;
+import no.nav.foreldrepenger.vtp.testmodell.repo.Testscenario;
+import no.nav.foreldrepenger.vtp.testmodell.repo.TestscenarioRepository;
+import no.nav.foreldrepenger.vtp.testmodell.repo.TestscenarioTemplate;
+import no.nav.foreldrepenger.vtp.testmodell.repo.TestscenarioTemplateRepository;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.*;

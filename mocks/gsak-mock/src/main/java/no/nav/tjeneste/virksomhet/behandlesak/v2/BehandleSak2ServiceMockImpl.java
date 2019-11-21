@@ -13,13 +13,13 @@ import javax.xml.ws.RequestWrapper;
 import javax.xml.ws.ResponseWrapper;
 import javax.xml.ws.soap.Addressing;
 
+import no.nav.foreldrepenger.vtp.autotest.testscenario.personopplysning.brukermodell.PersonModell;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import no.nav.foreldrepenger.vtp.felles.ExpectPredicate;
 import no.nav.foreldrepenger.vtp.felles.ExpectRepository;
 import no.nav.foreldrepenger.vtp.felles.ExpectRepository.Mock;
-import no.nav.foreldrepenger.vtp.testmodell.personopplysning.PersonModell;
 import no.nav.foreldrepenger.vtp.testmodell.repo.TestscenarioBuilderRepository;
 import no.nav.tjeneste.virksomhet.sak.v1.GsakRepo;
 

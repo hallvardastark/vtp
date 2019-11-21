@@ -1,14 +1,13 @@
 package no.nav.foreldrepenger.vtp.testmodell.repo.impl;
 
+import no.nav.foreldrepenger.vtp.autotest.testscenario.identer.LokalIdentIndeks;
 import no.nav.foreldrepenger.vtp.testmodell.enheter.EnheterIndeks;
-import no.nav.foreldrepenger.vtp.testmodell.identer.LokalIdentIndeks;
 import no.nav.foreldrepenger.vtp.testmodell.inntektytelse.InntektYtelseModell;
 import no.nav.foreldrepenger.vtp.testmodell.organisasjon.OrganisasjonModell;
 import no.nav.foreldrepenger.vtp.testmodell.personopplysning.PersonIndeks;
 import no.nav.foreldrepenger.vtp.testmodell.repo.BasisdataProvider;
 import no.nav.foreldrepenger.vtp.testmodell.repo.Testscenario;
 import no.nav.foreldrepenger.vtp.testmodell.repo.TestscenarioBuilderRepository;
-import no.nav.foreldrepenger.vtp.testmodell.repo.TestscenarioImpl;
 
 import java.util.Map;
 import java.util.Objects;

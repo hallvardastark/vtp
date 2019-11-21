@@ -1,6 +1,6 @@
 package no.nav.foreldrepenger.vtp.server.api.scenario;
 
-import no.nav.foreldrepenger.vtp.kontrakter.TestscenarioDto;
+import no.nav.foreldrepenger.vtp.autotest.testscenario.TestscenarioDto;
 import no.nav.foreldrepenger.vtp.testmodell.repo.Testscenario;
 
 public class TestscenarioConverter {

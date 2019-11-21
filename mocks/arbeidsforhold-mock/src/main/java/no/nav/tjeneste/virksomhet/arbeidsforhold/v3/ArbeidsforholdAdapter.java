@@ -28,7 +28,7 @@ public class ArbeidsforholdAdapter {
 
     private ObjectFactory objectFactory = new ObjectFactory();
 
-    public Arbeidsforhold fra(String fnr, no.nav.foreldrepenger.vtp.testmodell.inntektytelse.arbeidsforhold.Arbeidsforhold arbeidsforholdModell){
+    public Arbeidsforhold fra(String fnr, no.nav.foreldrepenger.vtp.autotest.testscenario.inntektytelse.arbeidsforhold.Arbeidsforhold arbeidsforholdModell){
 
         var arbeidsforhold = objectFactory.createArbeidsforhold();
         arbeidsforhold.setArbeidsforholdID(arbeidsforholdModell.getArbeidsforholdId());
@@ -48,11 +48,11 @@ public class ArbeidsforholdAdapter {
         ansperiode.setPeriode(enansperiode);
         arbeidsforhold.setAnsettelsesPeriode(ansperiode);
 
-        for (no.nav.foreldrepenger.vtp.testmodell.inntektytelse.arbeidsforhold.Arbeidsavtale arbeidsavtale : arbeidsforholdModell.getArbeidsavtaler()) {
+        for (no.nav.foreldrepenger.vtp.autotest.testscenario.inntektytelse.arbeidsforhold.Arbeidsavtale arbeidsavtale : arbeidsforholdModell.getArbeidsavtaler()) {
             arbeidsforhold.getArbeidsavtale().add(fra(arbeidsavtale));
         }
 
-        for (no.nav.foreldrepenger.vtp.testmodell.inntektytelse.arbeidsforhold.Permisjon permisjon : arbeidsforholdModell.getPermisjoner()) {
+        for (no.nav.foreldrepenger.vtp.autotest.testscenario.inntektytelse.arbeidsforhold.Permisjon permisjon : arbeidsforholdModell.getPermisjoner()) {
             arbeidsforhold.getPermisjonOgPermittering().add(fra(permisjon));
         }
 
@@ -74,7 +74,7 @@ public class ArbeidsforholdAdapter {
         return arbeidsforhold;
     }
 
-    public Arbeidsavtale fra(no.nav.foreldrepenger.vtp.testmodell.inntektytelse.arbeidsforhold.Arbeidsavtale arbeidsavtaleModell){
+    public Arbeidsavtale fra(no.nav.foreldrepenger.vtp.autotest.testscenario.inntektytelse.arbeidsforhold.Arbeidsavtale arbeidsavtaleModell){
         Arbeidsavtale arbeidsavtale = objectFactory.createArbeidsavtale();
 
         arbeidsavtale.setAvtaltArbeidstimerPerUke(lagBD(arbeidsavtaleModell.getAvtaltArbeidstimerPerUke()));
@@ -91,7 +91,7 @@ public class ArbeidsforholdAdapter {
         return arbeidsavtale;
     }
 
-    public PermisjonOgPermittering fra(no.nav.foreldrepenger.vtp.testmodell.inntektytelse.arbeidsforhold.Permisjon permisjonModell){
+    public PermisjonOgPermittering fra(no.nav.foreldrepenger.vtp.autotest.testscenario.inntektytelse.arbeidsforhold.Permisjon permisjonModell){
         var permisjonOgPermittering = objectFactory.createPermisjonOgPermittering();
         var permisjonsOgPermitteringsBeskrivelse = new PermisjonsOgPermitteringsBeskrivelse();
         permisjonsOgPermitteringsBeskrivelse.setKodeRef(permisjonModell.getPermisjonstype().getKode());

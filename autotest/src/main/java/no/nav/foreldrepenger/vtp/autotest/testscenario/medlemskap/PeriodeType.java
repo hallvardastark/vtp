@@ -1,42 +1,37 @@
-package no.nav.foreldrepenger.vtp.testmodell.medlemskap;
+package no.nav.foreldrepenger.vtp.autotest.testscenario.medlemskap;
+
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
+import no.nav.foreldrepenger.vtp.autotest.testscenario.personopplysning.Landkode;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
-
-import no.nav.foreldrepenger.vtp.testmodell.personopplysning.Landkode;
-
-public class PeriodeStatus {
+public class PeriodeType {
 
     private static List<String> VALID_KODER;
     static {
         List<String> koder = new ArrayList<>();
-        koder.add("INNV"); // innvilget
-        koder.add("AVSL"); // avslått
-        koder.add("AVST"); // avvist
-        koder.add("GYLD"); // gyldig
-        koder.add("UAVK"); // uavklart
+        koder.add("PMMEDSKP"); // Periode med medlemskap
+        koder.add("PUMEDSKP"); // Periode uten medlemskap
+        koder.add("E500INFO"); // Utenlandsk id
 
         VALID_KODER = Collections.unmodifiableList(koder);
     }
 
-    public static final PeriodeStatus INNV = new PeriodeStatus("INNV");
-    public static final PeriodeStatus AVSL = new PeriodeStatus("AVSL");
-    public static final PeriodeStatus AVST = new PeriodeStatus("AVST");
-    public static final PeriodeStatus GYLD= new PeriodeStatus("GYLD");
-    public static final PeriodeStatus UAVK= new PeriodeStatus("UAVK");
+    public static final PeriodeType PMMEDSKP = new PeriodeType("PMMEDSKP");
+    public static final PeriodeType PUMEDSKP = new PeriodeType("PUMEDSKP");
+    public static final PeriodeType E500INFO = new PeriodeType("E500INFO");
 
     private String kode;
 
     @JsonCreator
-    public PeriodeStatus(String kode) {
+    public PeriodeType(String kode) {
         this.kode = kode == null ? this.kode : kode;
         if (kode != null && !VALID_KODER.contains(kode)) {
-            throw new IllegalArgumentException("Kode er ikke gyldig Medl2 periodestatus type: " + kode);
+            throw new IllegalArgumentException("Kode er ikke gyldig Medl2 periodetype: " + kode);
         }
     }
 
