@@ -1,17 +1,17 @@
 package no.nav.foreldrepenger.vtp.server.api.feed;
 
-import java.io.IOException;
-
-import no.nav.foreldrepenger.vtp.kontrakter.DødfødselhendelseDto;
-import no.nav.foreldrepenger.vtp.kontrakter.DødshendelseDto;
-import no.nav.foreldrepenger.vtp.kontrakter.FødselshendelseDto;
-import no.nav.foreldrepenger.vtp.kontrakter.PersonhendelseDto;
+import no.nav.foreldrepenger.vtp.autotest.personhendelse.DødfødselhendelseDto;
+import no.nav.foreldrepenger.vtp.autotest.personhendelse.DødshendelseDto;
+import no.nav.foreldrepenger.vtp.autotest.personhendelse.FødselshendelseDto;
+import no.nav.foreldrepenger.vtp.autotest.personhendelse.PersonhendelseDto;
 import no.nav.foreldrepenger.vtp.testmodell.feed.DødfødselOpprettetHendelseContent;
 import no.nav.foreldrepenger.vtp.testmodell.feed.DødsmeldingOpprettetHendelseContent;
 import no.nav.foreldrepenger.vtp.testmodell.feed.FødselsmeldingOpprettetHendelseContent;
 import no.nav.foreldrepenger.vtp.testmodell.feed.HendelseContent;
 import no.nav.foreldrepenger.vtp.testmodell.repo.impl.BasisdataProviderFileImpl;
 import no.nav.foreldrepenger.vtp.testmodell.repo.impl.TestscenarioRepositoryImpl;
+
+import java.io.IOException;
 
 public class PersonhendelseAdapter {
 

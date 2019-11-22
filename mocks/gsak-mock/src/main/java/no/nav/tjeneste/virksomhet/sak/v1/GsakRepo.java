@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import no.nav.foreldrepenger.vtp.autotest.testscenario.personopplysning.PersonModell;
+import no.nav.foreldrepenger.vtp.autotest.scenario.personopplysning.PersonModell;
 import no.nav.foreldrepenger.vtp.felles.ConversionUtils;
 import no.nav.tjeneste.virksomhet.sak.v1.binding.HentSakSakIkkeFunnet;
 import no.nav.tjeneste.virksomhet.sak.v1.feil.SakIkkeFunnet;

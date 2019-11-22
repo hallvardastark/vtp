@@ -1,21 +1,20 @@
 package no.nav.foreldrepenger.vtp.server.api.journalforing;
 
-import java.time.LocalDateTime;
-
-import javax.ws.rs.*;
-import javax.ws.rs.core.MediaType;
-
-import no.nav.foreldrepenger.vtp.testmodell.dokument.modell.koder.Journalstatus;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import no.nav.foreldrepenger.vtp.autotest.journalpost.JournalforingResultatDto;
 import no.nav.foreldrepenger.vtp.testmodell.dokument.JournalpostModellGenerator;
 import no.nav.foreldrepenger.vtp.testmodell.dokument.modell.JournalpostModell;
 import no.nav.foreldrepenger.vtp.testmodell.dokument.modell.koder.DokumenttypeId;
+import no.nav.foreldrepenger.vtp.testmodell.dokument.modell.koder.Journalstatus;
 import no.nav.foreldrepenger.vtp.testmodell.repo.JournalRepository;
 import no.nav.foreldrepenger.vtp.testmodell.repo.impl.JournalRepositoryImpl;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import javax.ws.rs.*;
+import javax.ws.rs.core.MediaType;
+import java.time.LocalDateTime;
 
 @Api(tags = "Journalføringsmock")
 @Path("/api/journalforing")
