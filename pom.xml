@@ -37,7 +37,7 @@
 
         <cxf.version>3.3.4</cxf.version>
         <swagger.version>1.6.0</swagger.version>
-
+        <graphql-java.version>12.0</graphql-java.version>
     </properties>
 
     <dependencyManagement>
@@ -550,6 +550,12 @@
                 <groupId>javax</groupId>
                 <artifactId>javaee-api</artifactId>
                 <version>7.0</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.graphql-java</groupId>
+                <artifactId>graphql-java</artifactId>
+                <version>${graphql-java.version}</version>
             </dependency>
 
             <dependency>
